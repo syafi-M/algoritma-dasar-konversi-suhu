@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-01-05 09.05.48 PM"/>
+        <attribute name="created" value="VXNlcjtMQVBUT1AtVFI5RVQ2TU87MjAyNC0wMS0wNTswOC40OS41OCBQTTsyNzc4"/>
+        <attribute name="edited" value="VXNlcjtMQVBUT1AtVFI5RVQ2TU87MjAyNC0wMS0wNTswOS4wNS4wOSBQTTs1O1VzZXI7TEFQVE9QLVRSOUVUNk1POzIwMjMtMTItMTg7MDcuMzcuMTcgQU07Y2Vsc2l1cyBrZSBmYWhyZW5oZWl0IGRhbiBzZWJhbGlrbnlhLmZwcmc7OTc0OQ=="/>
+        <attribute name="edited" value="VXNlcjtMQVBUT1AtVFI5RVQ2TU87MjAyNC0wMS0wNTswOS4wNS40OCBQTTsyOzI4Nzk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="c, f, k, hasil, ulang, pilihan" type="Real" array="False" size=""/>
+            <output expression="&quot;Masukkan Pilihan&quot;" newline="True"/>
+            <output expression="&quot;1. Fahrenheit --&gt; Kelvin&quot;" newline="True"/>
+            <output expression="&quot;2. Kelvin --&gt; Fahrenheit&quot;" newline="True"/>
+            <input variable="pilihan"/>
+            <if expression="pilihan == 1">
+                <then>
+                    <output expression="&quot;Masukkan jumlah Fahrenheit&quot;" newline="True"/>
+                    <input variable="f"/>
+                    <assign variable="c" expression="0.5556*( f - 32 )"/>
+                    <assign variable="hasil" expression="c + 273.15"/>
+                    <output expression="&quot;Hasilnya adalah &quot; &amp;hasil&amp;&quot; Kelvin&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="pilihan == 2">
+                        <then>
+                            <output expression="&quot;Masukkan jumlah Kelvin&quot;" newline="True"/>
+                            <input variable="k"/>
+                            <assign variable="c" expression="k - 273.15"/>
+                            <assign variable="hasil" expression="(0.5556 * c)+32"/>
+                            <output expression="&quot;Hasilnya adalah &quot; &amp;hasil&amp;&quot; Fahrenheit&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Tidak Ada Pilihan Dengan Nomor Tersebut&quot;" newline="True"/>
+                            <call expression="main"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Pilihan ketik:&quot;" newline="True"/>
+            <output expression="&quot;1. untuk lanjut menghitung&quot;" newline="True"/>
+            <output expression="&quot;0. Untuk Berhenti&quot;" newline="True"/>
+            <input variable="ulang"/>
+            <if expression="ulang == 1">
+                <then>
+                    <call expression="main"/>
+                </then>
+                <else>
+                    <if expression="ulang == 0">
+                        <then>
+                            <output expression="&quot;Oke, Sampai Bertemu Kembali&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Pilihan Tidak Ada&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
